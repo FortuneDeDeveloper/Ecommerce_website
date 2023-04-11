@@ -92,10 +92,10 @@ if(isset($_POST['order'])){
       ?>
          <input type="hidden" name="total_products" value="<?= $total_products; ?>">
          <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">
-         <div class="grand-total">grand total : <span>$<?= $grand_total; ?>/-</span></div>
+         <div class="grand-total">Total Price : <span>$<?= $grand_total; ?>/-</span></div>
       </div>
 
-      <h3>place your orders</h3>
+      <h3>Place your Orders</h3>
 
       <div class="flex">
          <div class="inputBox">
@@ -113,13 +113,13 @@ if(isset($_POST['order'])){
          <div class="inputBox">
             <span>payment method :</span>
             <select name="method" class="box" required>
-               <option value="cash on delivery">cash on delivery</option>
-               <option value="credit card">credit card</option>
-               <option value="paytm">paytm</option>
+               <option value="cash on delivery">Cash on Delivery</option>
+               <option value="credit card">Credit card</option>
+               <option value="paytm">Mobile Money</option>
                <option value="paypal">paypal</option>
             </select>
          </div>
-         <div class="inputBox">
+         <!-- div class="inputBox">
             <span>address line 01 :</span>
             <input type="text" name="flat" placeholder="e.g. flat number" class="box" maxlength="50" required>
          </div>
@@ -142,7 +142,7 @@ if(isset($_POST['order'])){
          <div class="inputBox">
             <span>pin code :</span>
             <input type="number" min="0" name="pin_code" placeholder="e.g. 123456" min="0" max="999999" onkeypress="if(this.value.length == 6) return false;" class="box" required>
-         </div>
+         </div -->
       </div>
 
       <input type="submit" name="order" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>" value="place order">
